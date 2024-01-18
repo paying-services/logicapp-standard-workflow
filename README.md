@@ -6,5 +6,11 @@ main function reference
 
 https://learn.microsoft.com/en-us/cli/azure/logicapp/deployment/source?view=azure-cli-latest#az-logicapp-deployment-source-config-zip
 
+checklist
+
+* does affect existing workflow? no
+* does it affect existing webjob? pending
+* does it affect exiting workflow if name is the same? pending 
+
 produce the following output
 ![image](https://github.com/paying-services/logicapp-standard-workflow/assets/16611331/f448d534-f668-4fbb-9c74-4bfc5a6da9e0)
