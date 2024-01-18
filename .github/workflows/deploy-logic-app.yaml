@@ -1,0 +1,28 @@
+name: Deploy Logic App
+run-name: Deploy Logic App 
+on:
+  workflow_dispatch:
+
+permissions:
+  id-token: write
+  contents: write
+
+jobs:
+
+  execute:
+    name: Deploy Code
+    runs-on: self-hosted #my only local runner
+
+    steps:
+    # Checkout code
+    - uses: actions/checkout@v3    
+    - name: zip current content 
+      run: zip -r deploy-zip . -x ".git/*" ".github/*"
+    #https://github.com/marketplace/actions/azure-login#login-with-a-service-principal-secret
+    - name: Az CLI login
+      uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+    - name: deploy multiple workflow to standard logic app
+      run: |
+        az logicapp deployment source config-zip --name gabologicapp  --resource-group just-for-vms --src deploy.zip
