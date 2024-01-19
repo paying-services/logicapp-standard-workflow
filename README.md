@@ -18,7 +18,7 @@ checklist
 
 
 produce the following output
-![image](https://github.com/paying-services/logicapp-standard-workflow/assets/16611331/f448d534-f668-4fbb-9c74-4bfc5a6da9e0)
+![Alt text](image.png)
 
 important notes
 
