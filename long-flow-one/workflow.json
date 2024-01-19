@@ -1,0 +1,36 @@
+{
+  "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "actions": {
+          "Lists_blobs_(V2)": {
+              "inputs": {
+                  "host": {
+                      "connection": {
+                          "referenceName": "azureblob"
+                      }
+                  },
+                  "method": "get",
+                  "path": "/v2/datasets/@{encodeURIComponent(encodeURIComponent('justforvms8428'))}/foldersV2/@{encodeURIComponent(encodeURIComponent('JTJmYXp1cmUtd2Viam9icy1ob3N0cw=='))}",
+                  "queries": {
+                      "nextPageMarker": "",
+                      "useFlatListing": false
+                  }
+              },
+              "metadata": {
+                  "JTJmYXp1cmUtd2Viam9icy1ob3N0cw==": "/azure-webjobs-hosts"
+              },
+              "runAfter": {},
+              "type": "ApiConnection"
+          }
+      },
+      "contentVersion": "1.0.0.0",
+      "outputs": {},
+      "triggers": {
+          "When_a_HTTP_request_is_received": {
+              "kind": "Http",
+              "type": "Request"
+          }
+      }
+  },
+  "kind": "Stateful"
+}
