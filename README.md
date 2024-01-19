@@ -10,7 +10,9 @@ checklist
 
 * does affect existing workflow? no
 * does it affect existing webjob? pending
-* does it affect exiting workflow if name is the same? pending 
+* does it affect exiting workflow if name is the same? yes  and also override any existing flow defined on there
+* does it support statefull flow? yes
+* does it support stateless flow? 
 
 produce the following output
 ![image](https://github.com/paying-services/logicapp-standard-workflow/assets/16611331/f448d534-f668-4fbb-9c74-4bfc5a6da9e0)
