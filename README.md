@@ -13,7 +13,13 @@ checklist
 * does it affect exiting workflow if name is the same? yes  and also override any existing flow defined on there
 * does it support statefull flow? yes
 * does it support stateless flow? yes
-* does it support flow with service provider conection? 
+* does it support flow with service provider conection? yes
+* does it support flow with api conection? yes
+
 
 produce the following output
 ![image](https://github.com/paying-services/logicapp-standard-workflow/assets/16611331/f448d534-f668-4fbb-9c74-4bfc5a6da9e0)
+
+important notes
+
+* having multiple workflow in a single logic app with standard plan require to adjust the standard plan resource asignment to be able to have all the workflow working correctly
