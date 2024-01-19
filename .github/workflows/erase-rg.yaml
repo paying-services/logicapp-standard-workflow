@@ -1,0 +1,26 @@
+name: erase resource group
+run-name: erase resource group
+on:
+  workflow_dispatch:
+
+permissions:
+  id-token: write
+  contents: write
+
+jobs:
+
+  execute:
+    name: Deploy Code
+    runs-on: self-hosted #my only local runner
+
+    steps:
+    # Checkout code
+    - uses: actions/checkout@v3    
+    #https://github.com/marketplace/actions/azure-login#login-with-a-service-principal-secret
+    - name: Az CLI login
+      uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+    - name: deploy multiple workflow to standard logic app
+      run: |
+        az deployment group create -g rg-to-be-deleted --mode Complete
